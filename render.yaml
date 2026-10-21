@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dog-cam
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      # Значения вводятся в панели Render при создании, в репозиторий не попадают
+      - key: LOGIN
+        sync: false
+      - key: PASSWORD
+        sync: false
